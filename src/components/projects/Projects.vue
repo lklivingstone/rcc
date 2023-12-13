@@ -58,10 +58,11 @@ body {
   width: 300px;
   background-color: aliceblue;
   overflow: hidden;
-  height: 385px;
+  height: 240px;
   margin: 50px;
   background: radial-gradient(#3f3f3f 50%, #3f3f3f 100%);
   position: relative;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
 
 .card img {

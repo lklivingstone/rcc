@@ -162,11 +162,11 @@ body {
 } */
 
 .footer h3>span {
-  background-color: #3f3f3f;
-  color: #f3f3f3;
+  background-color: #f3f3f3;
+  color: #3f3f3f;
   line-height: 1.8;
   padding: 5px;
-
+  font-style: italic;
 }
 
 </style>
