@@ -1,6 +1,6 @@
 <template>
     <div class="container">
-      <div class="box">
+      <div v-intersect="showElement" class="box hidden">
         <img :src="require(`../../assets/gear.svg`)">
         <div class="text">
           <p class="header">About Us</p>
@@ -12,7 +12,7 @@
           </p>
         </div>
       </div>
-      <div class="box">
+      <div v-intersect="showElement" class="box hidden">
         <img :src="require(`../../assets/crane.svg`)">
         <div class="text">
           <p class="header">Our Services</p>
@@ -25,7 +25,7 @@
           </p>
         </div>
       </div>
-      <div class="box">
+      <div v-intersect="showElement" class="box hidden">
         <img :src="require(`../../assets/gear.svg`)">
         <div class="text">
           <p class="header">Our Strengths</p>
@@ -37,7 +37,7 @@
           </p>
         </div>
       </div>
-      <div class="box">
+      <div v-intersect="showElement" class="box hidden">
         <img :src="require(`../../assets/team.svg`)">
         <div class="text">
           <p class="header">Management</p>
@@ -52,10 +52,56 @@
 </template>
 
 <script>
+export default {
+  directives: {
+    intersect: {
+      mounted(el, binding) {
+        const options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.5,
+        };
 
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              binding.value(el);
+            }
+          });
+        }, options);
+
+        observer.observe(el);
+      },
+    },
+  },
+  methods: {
+    showElement(el) {
+      el.classList.add('show');
+    },
+  },
+};
 </script>
 
 <style scoped>
+.hidden {
+  opacity: 0;
+  filter: blur(3px);
+  transform: translateY(20px);
+  transition: all 0.3s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateY(0);
+}
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
+
 img {
   height: 15%;
 }

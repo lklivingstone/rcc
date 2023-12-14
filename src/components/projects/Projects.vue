@@ -1,27 +1,27 @@
 <template>
   <h1 class="heading">Our Projects</h1>
   <div class="container">
-    <div class="card" >
+    <div v-intersect="showElement" class="card hidden" >
       <img :src="require(`../../assets/project-1.jpg`)">
       <p class="name">PROJECT 1</p>
     </div>
-    <div class="card" >
+    <div v-intersect="showElement" class="card hidden" >
       <img :src="require(`../../assets/project-1.jpg`)">
       <p class="name">PROJECT 1</p>
     </div>
-    <div class="card" >
+    <div v-intersect="showElement" class="card hidden" >
       <img :src="require(`../../assets/project-1.jpg`)">
       <p class="name">PROJECT 1</p>
     </div>
-    <div class="card" >
+    <div v-intersect="showElement" class="card hidden" >
       <img :src="require(`../../assets/project-1.jpg`)">
       <p class="name">PROJECT 1</p>
     </div>
-    <div class="card" >
+    <div v-intersect="showElement" class="card hidden" >
       <img :src="require(`../../assets/project-1.jpg`)">
       <p class="name">PROJECT 1</p>
     </div>
-    <div class="card" >
+    <div v-intersect="showElement" class="card hidden" >
       <img :src="require(`../../assets/project-1.jpg`)">
       <p class="name">PROJECT 1</p>
     </div>
@@ -29,10 +29,76 @@
 </template>
 
 <script>
+export default {
+  directives: {
+    intersect: {
+      mounted(el, binding) {
+        const options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.5,
+        };
 
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              binding.value(el);
+            }
+          });
+        }, options);
+
+        observer.observe(el);
+      },
+    },
+  },
+  methods: {
+    showElement(el) {
+      el.classList.add('show');
+    },
+  },
+};
 </script>
 
 <style scoped>
+.hidden {
+  opacity: 0;
+  filter: blur(3px);
+  transform: translateX(-50px);
+  transition: all 0.3s;
+}
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
+
+.card:nth-child(2) {
+  transition-delay: 200ms;
+}
+
+.card:nth-child(3) {
+  transition-delay: 300ms;
+}
+
+.card:nth-child(4) {
+  transition-delay: 400ms;
+}
+
+.card:nth-child(5) {
+  transition-delay: 500ms;
+}
+
+.card:nth-child(6) {
+  transition-delay: 600ms;
+}
+
+
+@media(prefers-reduced-motion) {
+  .hidden {
+    transition: none;
+  }
+}
 
 body {
   margin: 0;
@@ -59,7 +125,7 @@ body {
   background-color: aliceblue;
   overflow: hidden;
   height: 240px;
-  margin: 50px;
+  margin: 20px 50px;
   background: radial-gradient(#3f3f3f 50%, #3f3f3f 100%);
   position: relative;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);

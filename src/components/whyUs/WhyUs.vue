@@ -4,7 +4,7 @@
 experience have allowed us to deliver valuable and cost-effective solutions that cater to the diverse
 specifications of our clients. Here are some key factors that set us apart and contribute to our success:</p>
   <div class="container">
-    <div class="card left dark-bg">
+    <div v-intersect="showElement" class="card left dark-bg hidden">
       <h3>Experience</h3>
       <div class="subcard">
         <p>
@@ -14,7 +14,7 @@ which has honed our skills and expertise in delivering quality construction and 
         </p>
       </div>
     </div>
-    <div class="card right light-bg">
+    <div v-intersect="showElement" class="card right light-bg hidden">
       <h3>Modern Techniques and Methodologies</h3>
       <div class="subcard">
         <p>
@@ -24,7 +24,7 @@ highest quality. Our commitment to innovation allows us to deliver exceptional r
         </p>
       </div>
     </div>
-    <div class="card left light-bg">
+    <div v-intersect="showElement" class="card left light-bg hidden">
       <h3>Timely Execution</h3>
       <div class="subcard">
         <p>
@@ -34,7 +34,7 @@ project management and coordination to minimize delays and deliver on time.
         </p>
       </div>
     </div>
-    <div class="card right dark-bg">
+    <div v-intersect="showElement" class="card right dark-bg hidden">
       <h3>Customized Solutions</h3>
       <div class="subcard">
         <p>
@@ -45,7 +45,7 @@ expectations.
         </p>
       </div>
     </div>
-    <div class="card left dark-bg">
+    <div v-intersect="showElement" class="card left dark-bg hidden">
       <h3>Equipment for Mechanized Working</h3>
       <div class="subcard">
         <p>
@@ -56,7 +56,7 @@ exceptional results.
         </p>
       </div>
     </div>
-    <div class="card right light-bg">
+    <div v-intersect="showElement" class="card right light-bg hidden">
       <h3>Strong Technical and Execution Team</h3>
       <div class="subcard">
         <p>
@@ -79,10 +79,50 @@ every project.
 </template>
 
 <script>
+export default {
+  directives: {
+    intersect: {
+      mounted(el, binding) {
+        const options = {
+          root: null,
+          rootMargin: '0px',
+          threshold: 0.5,
+        };
 
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              binding.value(el);
+            }
+          });
+        }, options);
+
+        observer.observe(el);
+      },
+    },
+  },
+  methods: {
+    showElement(el) {
+      el.classList.add('show');
+    },
+  },
+};
 </script>
 
 <style scoped>
+.hidden {
+  opacity: 0;
+  filter: blur(3px);
+  transform: translateY(20px);
+  transition: all 0.3s;
+}
+
+
+.show {
+  opacity: 1;
+  filter: blur(0);
+  transform: translateX(0);
+}
 
 body {
   margin: 0;
@@ -109,7 +149,7 @@ body {
 
 .card {
   width: 50%;
-  height: 250px;
+  min-height: 250px;
   text-align: left;
   padding: 30px;
   display: flex;
@@ -141,7 +181,7 @@ body {
   background: linear-gradient(to top, #3f3f3f, #333333);
   margin: 10px 0 10px 0;
   padding: 10px;
-  height: 70%;
+  /* height: 70%; */
   line-height: 1.5;
 }
 
@@ -149,7 +189,7 @@ body {
   background: linear-gradient(to bottom, #c9dae6, #b9d2e5);
   margin: 10px 0 10px 0;
   padding: 10px;
-  height: 70%;
+  /* height: 70%; */
   line-height: 1.5;
 }
 
