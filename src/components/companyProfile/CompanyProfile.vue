@@ -76,7 +76,7 @@ body {
 }
 
 .text {
-  text-align: left;
+  text-align: center;
   display: flex;
   justify-content: space-between;
   flex-direction: column;

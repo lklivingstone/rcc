@@ -68,12 +68,18 @@
         transition: top 0.3s;
         display: flex;
         z-index: 100;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
     }
   
     a {
         color: #3F3F3F;
         text-align: center;
         text-decoration: none;
+        font-weight: 700;
+    }
+
+    a:hover {
+        color: #17459b;
     }
   
     .logo:hover {

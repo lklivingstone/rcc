@@ -21,7 +21,7 @@ const ROWS = 5;
 export default {
   data() {
     return {
-      names: ['slack.png', 'spotify.png', 'salesforce.png', 'ey.png', 'amusic.png'],
+      names: ['minex.png', 'safeexpress.png', 'pix.png', 'neco.png', 'jsw.png', 'elkem.png', 'eicher.png', 'caterpillar.png', 'asianpaints.png'],
       rows: Array.from({ length: ROWS }),
     };
   },
@@ -67,6 +67,7 @@ body {
 
   .inner {
     display: flex;
+    align-items: center;
     width: fit-content;
     animation-name: loop;
     animation-timing-function: linear;
