@@ -1,8 +1,78 @@
 <template>
-    <div class="container">
-      <div v-intersect="showElement" class="box hidden">
-        <img :src="require(`../../assets/gear.svg`)">
+  <div class="container">
+      <div v-intersect="showElement" class="each-container hidden">
+        <div class="img">
+          <img :src="require(`../../assets/gear.svg`)">
+        </div>
         <div class="text">
+          <p class="header">About Us</p>
+          <p class="body">
+            We are a leading organization engaged in rendering Construction and Rental Services. With years of
+            experience, we specialize in the construction of industrial buildings, high-rise commercial complexes,
+            warehouses, and turnkey projects. Our team of dedicated professionals ensures the timely
+            implementation of our solutions, catering to the residential, commercial, and industrial sectors.
+          </p>
+        </div>
+      </div>
+      <div v-intersect="showElement" class="each-container hidden">
+        <div class="img">
+          <img :src="require(`../../assets/crane.svg`)">
+        </div>
+        <div class="text">
+          <p class="header">Our Services</p>
+          <p class="body">
+            Rao Construction Company, we pride ourselves on our ability to deliver high-quality construction
+            services with utmost perfection and excellence. Our expertise lies in providing aesthetically appealing
+            and functional layouts for establishments. We believe in mechanized working to ensure fast and
+            efficient project completion. Additionally, we offer equipment rental services, including cranes, to our
+            valuable customers.
+          </p>
+        </div>
+      </div>
+      <div v-intersect="showElement" class="each-container hidden">
+        <div class="img">
+          <img :src="require(`../../assets/gear.svg`)">
+        </div>
+        <div class="text">
+          <p class="header">Our Strengths</p>
+          <p class="body">
+            With an efficient workforce and the latest techniques, machines, and equipment, we are capable of
+            delivering accurate and timely construction solutions. We prioritize the use of premium quality raw
+            materials sourced from trusted vendors in the market, ensuring the durability and longevity of our
+            projects.
+          </p>
+        </div>
+      </div>
+      <div v-intersect="showElement" class="each-container hidden">
+        <div class="img">
+          <img :src="require(`../../assets/team.svg`)">
+        </div>
+        <div class="text">
+          <p class="header">Management</p>
+          <p class="body">
+            Under the visionary guidance of our Managing Director, Mr. Sunil Rao, we have established ourselves
+            as an eminent name in the construction industry. His in-depth knowledge and years of experience
+            have helped us attain a strong foothold in the market.
+          </p>
+        </div>
+      </div>
+      <!-- <div class="each-container">
+        <div class="img">
+          <img :src="require(`../../assets/team.svg`)">
+        </div>
+        <div class="text">
+          <p class="header">Management</p>
+          <p class="body">
+            Under the visionary guidance of our Managing Director, Mr. Sunil Rao, we have established ourselves
+            as an eminent name in the construction industry. His in-depth knowledge and years of experience
+            have helped us attain a strong foothold in the market.
+          </p>
+        </div>
+      </div> -->
+      <!-- <div v-intersect="showElement" class="box hidden">
+        <div class="text">
+          <img class="img" :src="require(`../../assets/gear.svg`)">
+
           <p class="header">About Us</p>
           <p class="body">
             We are a leading organization engaged in rendering Construction and Rental Services. With years of
@@ -47,7 +117,7 @@
             have helped us attain a strong foothold in the market.
           </p>
         </div>
-      </div>
+      </div> -->
     </div>
 </template>
 
@@ -102,19 +172,38 @@ export default {
   }
 }
 
-img {
-  height: 15%;
+.each-container {
+  margin-bottom: 20px;
+  display: flex;
+  gap: 30px;
 }
+
+.img {
+  width: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+img {
+  width: 60%;
+  max-height: 80%;
+}
+
+/* img {
+  height: 15%;
+} */
 body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
 .container {
-  padding: 100px;
+  padding: 50px;
   padding-left: 10vw;
   padding-right: 10vw;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   z-index: 1;
   background-color: #DFE5E9;
@@ -122,9 +211,10 @@ body {
 }
 
 .text {
-  text-align: center;
+  width: 80%;
+  text-align: left;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   flex-direction: column;
 }
 

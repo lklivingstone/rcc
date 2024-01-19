@@ -3,9 +3,9 @@
     <div class="services-container">
         <div class="services-header-container">
             <div>
-                <h1 class="left-header">
+                <!-- <h1 class="left-header">
                     Our Construction and Rental Services
-                </h1>
+                </h1> -->
                 <p class="left-sub">
                     At our firm, we take pride in being a distinguished name in the field of construction and rental services. With 
                     our expertise and experience, we cater to the unique requirements of our clients and execute all processes 
@@ -247,6 +247,7 @@ export default {
 .services-header-container {
     width: 50%;
     text-align: left;
+    padding: 20px;
 }
 
 .services-btn {
@@ -261,12 +262,12 @@ export default {
 }
 
 .table-container {
-  width: 50%;
-  padding: 20px;
-  /* margin-left: auto;
-  margin-right: auto;
-  padding-left: 10px;
-  padding-right: 10px; */
+    width: 50%;
+    padding: 20px;
+    /* margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px; */
 }
 
 .responsive-table li {
