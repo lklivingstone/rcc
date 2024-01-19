@@ -2,13 +2,13 @@
     <div>
       <div id="navbar" :style="{ top: navbarTop }">
         <div class="logo">
-            <a href="#home">Logo.</a>
+            <a href="#">Logo.</a>
         </div>
         <div class="options">
             <a href="#company">Company</a>
+            <a href="#services">Services</a>
             <a href="#clients">Clients</a>
             <a href="#projects">Projects</a>
-            <a href="#joinus">Join Us</a>
             <a href="#contactus">Contact Us</a>
         </div>
       </div>

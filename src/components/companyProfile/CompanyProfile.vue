@@ -142,7 +142,7 @@ body {
   margin-bottom: 10px;
   /* background-color: lightgray; */
   box-sizing: border-box;
-  height: 50vh;
+  height: 100vh;
   padding: 30px;
 }
 
