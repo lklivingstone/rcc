@@ -184,15 +184,18 @@
             </div>           
         </div>
     </div>
+    <Footer />
 </template>
   
 <script>
 import Navbar from '@/components/navbar/Navbar.vue';
+import Footer from '@/components/footer/Footer.vue';
 
 export default {
     name: 'company',
     components: {
         Navbar,
+        Footer
     },
     data() {
         return {

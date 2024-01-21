@@ -40,7 +40,7 @@ body {
 .hero {
   height: 80vh;
   /* width: 100vw; */
-  background: url('../../assets/hero-bg.png') center/cover no-repeat;
+  background: url('../../../../assets/hero-bg.png') center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

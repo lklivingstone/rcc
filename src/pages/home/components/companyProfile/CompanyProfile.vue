@@ -2,7 +2,7 @@
   <div class="container">
       <div v-intersect="showElement" class="each-container hidden">
         <div class="img">
-          <img :src="require(`../../assets/gear.svg`)">
+          <img :src="require(`../../../../assets/gear.svg`)">
         </div>
         <div class="text">
           <p class="header">About Us</p>
@@ -16,7 +16,7 @@
       </div>
       <div v-intersect="showElement" class="each-container hidden">
         <div class="img">
-          <img :src="require(`../../assets/crane.svg`)">
+          <img :src="require(`../../../../assets/crane.svg`)">
         </div>
         <div class="text">
           <p class="header">Our Services</p>
@@ -31,7 +31,7 @@
       </div>
       <div v-intersect="showElement" class="each-container hidden">
         <div class="img">
-          <img :src="require(`../../assets/gear.svg`)">
+          <img :src="require(`../../../../assets/gear.svg`)">
         </div>
         <div class="text">
           <p class="header">Our Strengths</p>
@@ -45,7 +45,7 @@
       </div>
       <div v-intersect="showElement" class="each-container hidden">
         <div class="img">
-          <img :src="require(`../../assets/team.svg`)">
+          <img :src="require(`../../../../assets/team.svg`)">
         </div>
         <div class="text">
           <p class="header">Management</p>
@@ -207,7 +207,7 @@ body {
   justify-content: space-between;
   z-index: 1;
   background-color: #DFE5E9;
-  background: linear-gradient(rgba(223, 229, 233, .9), rgba(223, 229, 233, .9)), url('../../assets/bg-lines.jpg') center/cover no-repeat;
+  background: linear-gradient(rgba(223, 229, 233, .9), rgba(223, 229, 233, .9)), url('../../../../assets/bg-lines.jpg') center/cover no-repeat;
 }
 
 .text {

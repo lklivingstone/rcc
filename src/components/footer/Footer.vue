@@ -1,41 +1,22 @@
 <template>
   <footer>
       <div class="top">
-        <div class="pages">
-          <ul>
-            <h3>Brand Name</h3>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Catalog</a></li>
-            <li><a href="#">Search</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-
-          <ul>
-            <h3>Careers</h3>
-            <li><a href="#">Apply Online</a></li>
-            <li><a href="#">Available Positions</a></li>
-          </ul>
-
-          <ul>
-            <h3>About Us</h3>
-            <li><a href="#">Meet Our Team</a></li>
-            <li><a href="#">Our Responsibilities</a></li>
-            <li><a href="#">Our Codes</a></li>
-            <li><a href="#">Our Values</a></li>
-          </ul>
+        <div class="contact">
+          <p>
+            Contact: 
+          </p>
+          <p>
+            Mail: 
+          </p>
+          <p>
+            Office: 166, Laxmi Nagar, Nagpur: 440022, India
+          </p>
         </div>
-        <div class="newsletter">
-          <h3>Stay in Touch</h3>
-          <form>
-            <input
-              type="email"
-              name="newsletter_email"
-              id="newsletter_email"
-              placeholder="Email"
-            />
-            <input type="button" value="Submit" />
-          </form>
+        <div class="links">
+          <h3>Links</h3>
+          <router-link to="/company">About Us</router-link>
+          <router-link to="/clients">Clients</router-link>
+          <router-link to="/contactus">Contact Us</router-link>
         </div>
       </div>
       <!-- <div class="social">
@@ -54,18 +35,17 @@
 </script>
 
 <style scoped>
-* {
-  margin: 0;
-  padding: 0;
-  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+.contact {
+  text-align: left;
 }
 
-body {
+.links {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
-  overflow-x: hidden;
+  text-align: left;
 }
+
 
 a {
   color: rgb(231, 231, 231);

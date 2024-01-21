@@ -2,28 +2,28 @@
   <h1 class="heading">Our Projects</h1>
   <div class="container">
     <div v-intersect="showElement" class="card hidden" >
-      <img :src="require(`../../assets/project-1.jpg`)">
-      <p class="name">PROJECT 1</p>
+      <img :src="require(`../../../../assets/pix_trp_plant.jpg`)">
+      <p class="name">PIX TRP PLANT, Nagalwadi</p>
     </div>
     <div v-intersect="showElement" class="card hidden" >
-      <img :src="require(`../../assets/project-1.jpg`)">
-      <p class="name">PROJECT 1</p>
+      <img :src="require(`../../../../assets/pix_logistics_hub_1.jpg`)">
+      <p class="name">PIX LOGISTICS HUB, NAGPUR</p>
     </div>
     <div v-intersect="showElement" class="card hidden" >
-      <img :src="require(`../../assets/project-1.jpg`)">
-      <p class="name">PROJECT 1</p>
+      <img :src="require(`../../../../assets/pix_logistics_hub_3.jpg`)">
+      <p class="name">PIX LOGISTICS HUB, NAGPUR</p>
     </div>
     <div v-intersect="showElement" class="card hidden" >
-      <img :src="require(`../../assets/project-1.jpg`)">
-      <p class="name">PROJECT 1</p>
+      <img :src="require(`../../../../assets/safeexpress_dhamna_1.jpg`)">
+      <p class="name">SAFEXPRESS LOGISTICS PARK, DHAMNA</p>
     </div>
     <div v-intersect="showElement" class="card hidden" >
-      <img :src="require(`../../assets/project-1.jpg`)">
-      <p class="name">PROJECT 1</p>
+      <img :src="require(`../../../../assets/pix_rubber_plant.jpg`)">
+      <p class="name">PIX RUBBER PLANT</p>
     </div>
     <div v-intersect="showElement" class="card hidden" >
-      <img :src="require(`../../assets/project-1.jpg`)">
-      <p class="name">PROJECT 1</p>
+      <img :src="require(`../../../../assets/da_rock.jpg`)">
+      <p class="name">DA ROCK</p>
     </div>
   </div>
 </template>

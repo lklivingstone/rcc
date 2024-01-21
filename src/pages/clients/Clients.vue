@@ -62,26 +62,47 @@
             Clients who trust us
         </h2>
         <div class="img-container">
-            <img :src="require(`../../assets/pix-color.png`)">
-            <img :src="require(`../../assets/safeexpress-color.png`)">
-            <img :src="require(`../../assets/jsw-color.png`)">
-            <img :src="require(`../../assets/caterpillar-color.png`)">
-            <img :src="require(`../../assets/asianpaints-color.png`)">
-            <img :src="require(`../../assets/eicher-color.png`)">
-            <img :src="require(`../../assets/elkem-color.png`)">
-            <img :src="require(`../../assets/neco-color.png`)">
-            <img :src="require(`../../assets/minex-color.png`)">
+            <div class="img-wrapper">
+                <img :src="require(`../../assets/pix-color.png`)">
+            </div>
+            <div class="img-wrapper">
+                <img :src="require(`../../assets/safeexpress-color.png`)">
+            </div>
+            <div class="img-wrapper">
+                <img :src="require(`../../assets/jsw-color.png`)">
+            </div>
+            <div class="img-wrapper">
+                <img :src="require(`../../assets/caterpillar-color.png`)">
+            </div>
+            <div class="img-wrapper">
+                <img :src="require(`../../assets/asianpaints-color.png`)">
+            </div>
+            <div class="img-wrapper">
+                <img :src="require(`../../assets/eicher-color.png`)">
+            </div>
+            <div class="img-wrapper">
+                <img :src="require(`../../assets/elkem-color.png`)">
+            </div>
+            <div class="img-wrapper">
+                <img :src="require(`../../assets/neco-color.png`)">
+            </div>
+            <div class="img-wrapper">
+                <img :src="require(`../../assets/minex-color.png`)">
+            </div>
         </div>
     </div>
+    <Footer />
 </template>
   
 <script>
 import Navbar from '@/components/navbar/Navbar.vue';
+import Footer from '@/components/footer/Footer.vue';
 
 export default {
     name: 'clients',
     components: {
-        Navbar
+        Navbar,
+        Footer
     }
 }
 </script>
@@ -142,7 +163,7 @@ export default {
 }
 
 .client-sat-container-end {
-    padding: 30px 10vw 0 10vw;
+    padding: 30px 10vw 30px 10vw;
     text-align: left;
 }
 
@@ -151,16 +172,20 @@ export default {
 }
 
 .img-container {
-    /* display: flex; */
+    display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.img-container img {
+.img-wrapper {
     width: 30%;
-    /* height: auto; */
     margin: 10px 0 10px 0;
+}
+
+.img-wrapper img {
+    width: 50%;
+    /* height: auto; */
     /* margin: 10px; */
 }
 </style>
